@@ -22,5 +22,4 @@ My PowerShell profile including:
 
 # Things to do before using this profile
 
-1. Set up PSReadline and oh-my-posh, please have a look at Scott Hanselman's great blogpost [here](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal).
-2. Don't forget to replace `<username>` tag on oh-my-posh config.
+Set up PSReadline and oh-my-posh, please have a look at Scott Hanselman's great blogpost [here](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal).
