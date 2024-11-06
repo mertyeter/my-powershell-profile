@@ -1,7 +1,7 @@
 Import-Module -Name Terminal-Icons
 Import-Module PSReadLine
 
-oh-my-posh --init --shell pwsh --config "$env:USERPROFILE\AppData\Local\Programs\oh-my-posh\themes\cloud-native-azure.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:USERPROFILE\AppData\Local\Programs\oh-my-posh\themes\cloud-native-azure.omp.json" | Invoke-Expression
 
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
@@ -104,6 +104,12 @@ function gitAlign {
     git branch --v | Select-String -Pattern ".*\[gone\].*" | ForEach-Object { ($_ -split "\s+")[1] } | ForEach-Object { git branch -D $_ }
 }
 
+# Function to discard all local changes
+function gitDiscard {
+	git clean -df
+	git checkout -- .
+}
+
 # Function to clean and build dotnet project
 function dotnetCleanAndBuild {
     dotnet clean
@@ -126,6 +132,8 @@ Set-Alias -Name azsql-add-rule -Value addAzSqlFirewallRule
 Set-Alias -Name azsql-delete-rule -Value deleteAzSqlFirewallRule
 
 Set-Alias -Name git-align -Value gitAlign
+Set-Alias -Name git-discard -Value gitDiscard
+
 Set-Alias -Name build-all -Value buildAll
 Set-Alias -Name clean-project -Value cleanProject
 Set-Alias -Name dotnet-rebuild -Value dotnetCleanAndBuild
