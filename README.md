@@ -18,6 +18,7 @@ My PowerShell profile including:
     - **Add Azure SQL Firewall Rule:** Adds an Azure SQL firewall rule. Alias: `azsql-add-rule`
     - **Delete Azure SQL Firewall Rule:** Deletes an Azure SQL firewall rule. Alias: `azsql-delete-rule`
     - **Git Align:** Aligns git branches by deleting branches that are gone from the remote. Alias: `git-align`
+    - **Git Discard:** Discards all local changes in the git repository. Alias: `git-discard`
     - **Clean and Build Dotnet Project:** Cleans and builds the dotnet project. Alias: `dotnet-rebuild`
 
 # Things to do before using this profile
